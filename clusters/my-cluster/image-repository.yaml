@@ -4,5 +4,5 @@ metadata:
   name: backend
   namespace: flux-system
 spec:
-  image: ghcr.io/gallad51/LNKubernetes-Test/backend
+  image: ghcr.io/gallad51/lnkubernetes/backend
   interval: 1m
