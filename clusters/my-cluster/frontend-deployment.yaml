@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend
+  name: frontend
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: backend
+      app: frontend
   template:
     metadata:
       labels:
-        app: backend
+        app: frontend
     spec:
       containers:
-        - name: backend
-          image: tk8s-be:latest
+        - name: frontend
+          image: ghcr.io/gallad51/LNKubernetes-Test/frontend:latest
           imagePullPolicy: Never
           ports:
-            - containerPort: 3000
+            - containerPort: 80
