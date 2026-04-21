@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: ghcr.io/gallad51/LNKubernetes-Test/backend:latest
+          image: ghcr.io/gallad51/lnkubernetes-test/backend:1.0.0 # {"$imagepolicy": "flux-system:backend"}
           imagePullPolicy: Never
           ports:
             - containerPort: 3000
