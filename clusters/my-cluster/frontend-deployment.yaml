@@ -17,7 +17,7 @@ spec:
         - name: ghcr-secret
       containers:
         - name: frontend
-          image: ghcr.io/gallad51/lnkubernetes-test/frontend:latest # {"$imagepolicy": "flux-system:frontend"}
-          imagePullPolicy: Never
+          image: ghcr.io/gallad51/lnkubernetes-test/frontend:${{ SHA }}
+          # {"$imagepolicy": "flux-system:frontend"}
           ports:
             - containerPort: 80
