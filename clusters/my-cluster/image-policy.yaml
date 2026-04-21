@@ -7,5 +7,5 @@ spec:
   imageRepositoryRef:
     name: backend
   policy:
-    semver:
-      range: "*"
+    alphabetical:
+      order: asc
