@@ -12,6 +12,8 @@ spec:
     metadata:
       labels:
         app: backend
+    imagePullSecrets:
+      - name: ghcr-secret
     spec:
       containers:
         - name: backend
