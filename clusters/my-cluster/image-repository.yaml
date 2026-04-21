@@ -6,3 +6,5 @@ metadata:
 spec:
   image: ghcr.io/gallad51/lnkubernetes/backend
   interval: 1m
+  secretRef:
+    name: ghcr-auth
