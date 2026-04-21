@@ -17,7 +17,6 @@ spec:
         - name: ghcr-secret
       containers:
         - name: backend
-          image: ghcr.io/gallad51/lnkubernetes-test/backend:1.0.9
-          # {"$imagepolicy": "flux-system:backend"}
+          image: ghcr.io/gallad51/lnkubernetes-test/backend:1.0.9 # {"$imagepolicy": "flux-system:backend"}
           ports:
             - containerPort: 3000
