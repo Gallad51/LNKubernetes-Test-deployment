@@ -13,3 +13,8 @@ resources:
   - mongo-service.yaml
   - mongo-pvc.yaml
   - ingress.yaml
+  - image-policy.yaml
+  - image-repository.yaml
+  - image-update.yaml
+  - frontend-image-policy.yaml
+  - frontend-image-repository.yaml
