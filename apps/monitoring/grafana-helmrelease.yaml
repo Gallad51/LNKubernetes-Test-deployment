@@ -29,3 +29,14 @@ spec:
       enabled: true
       hosts:
         - grafana.local
+
+    datasources:
+      datasources.yaml:
+        apiVersion: 1
+        datasources:
+          - name: Loki
+            type: loki
+            url: http://loki-gateway.monitoring.svc.cluster.local
+            access: proxy
+            jsonData:
+              maxLines: 1000
