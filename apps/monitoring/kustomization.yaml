@@ -4,3 +4,6 @@ kind: Kustomization
 resources:
   - grafana-helmrepository.yaml
   - grafana-helmrelease.yaml
+  - loki-helmrepository.yaml
+  - loki-helmrelease.yaml
+  - promtail-helmrelease.yaml
