@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: metrics
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: metrics
+  template:
+    metadata:
+      labels:
+        app: metrics
+    spec:
+      imagePullSecrets:
+        - name: ghcr-secret
+      containers:
+        - name: metrics
+          image: ghcr.io/gallad51/lnkubernetes-test/metrics:1.0.16 # {"$imagepolicy": "flux-system:backend"}
+          ports:
+            - containerPort: 3000
