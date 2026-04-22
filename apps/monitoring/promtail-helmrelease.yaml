@@ -27,7 +27,7 @@ spec:
     # Loki endpoint configuration
     config:
       clients:
-        - url: http://loki-gateway.monitoring.svc.cluster.local/loki/api/v1/push
+        - url: http://loki-gateway.default.svc.cluster.local/loki/api/v1/push
 
     # Resource requests and limits
     resources:
