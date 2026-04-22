@@ -18,4 +18,8 @@ resources:
   - image-update.yaml
   - frontend-image-policy.yaml
   - frontend-image-repository.yaml
+  - metrics-deployment.yaml
+  - metrics-service.yaml
+  - metrics-image-policy.yaml
+  - metrics-image-repository.yaml
   - ../../apps/monitoring
