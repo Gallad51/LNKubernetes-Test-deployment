@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: loki
-      version: "6.*"
+      version: "6.55.0"
       sourceRef:
         kind: HelmRepository
         name: grafana
@@ -33,6 +33,6 @@ spec:
     loki:
       auth_enabled: false
 
-    persistence:
-      enabled: true
-      size: 5Gi
+    # 🔥 CRUCIAL: empêche l'auto-switch scalable
+    simpleScalable:
+      replicas: 0
