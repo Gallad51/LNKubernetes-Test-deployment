@@ -15,8 +15,16 @@ spec:
         namespace: flux-system
 
   values:
-    service:
-      type: ClusterIP
+    deploymentMode: SingleBinary
+
+    loki:
+      auth_enabled: false
+
+    singleBinary:
+      replicas: 1
+
+    storage:
+      type: filesystem
 
     persistence:
       enabled: true
