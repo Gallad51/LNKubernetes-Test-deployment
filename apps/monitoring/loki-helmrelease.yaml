@@ -16,23 +16,29 @@ spec:
         namespace: flux-system
 
   values:
-    deploymentMode: SingleBinary
+    auth_enabled: false
 
-    singleBinary:
-      replicas: 1
+    server:
+      http_listen_port: 3100
 
-    write:
-      replicas: 0
+    common:
+      ring:
+        instance_addr: 127.0.0.1
+        kvstore:
+          store: inmemory
+      replication_factor: 1
+      path_prefix: /tmp/loki
 
-    read:
-      replicas: 0
+    schema_config:
+      configs:
+        - from: 2020-05-15
+          store: tsdb
+          object_store: filesystem
+          schema: v13
+          index:
+            prefix: index_
+            period: 24h
 
-    backend:
-      replicas: 0
-
-    loki:
-      auth_enabled: false
-
-    # 🔥 CRUCIAL: empêche l'auto-switch scalable
-    simpleScalable:
-      replicas: 0
+    storage_config:
+      filesystem:
+        directory: /tmp/loki/chunks
