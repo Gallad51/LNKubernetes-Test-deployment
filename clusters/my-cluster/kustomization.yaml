@@ -18,3 +18,4 @@ resources:
   - image-update.yaml
   - frontend-image-policy.yaml
   - frontend-image-repository.yaml
+  - ../../apps/monitoring
