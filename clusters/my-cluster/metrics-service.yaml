@@ -7,5 +7,5 @@ spec:
   selector:
     app: metrics
   ports:
-    - port: 8080
-      targetPort: 3000
+    - port: 80
+      targetPort: 8080
